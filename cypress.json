@@ -2,6 +2,7 @@
   "env": {
     "url": "http://testing-ground.scraping.pro/login",
     "qa": "qa-env",
-    "uat": "uat-env"
+    "uat": "uat-env",
+    "dynamicTable": "https://www.w3schools.com/html/html_tables.asp"
   }
 }

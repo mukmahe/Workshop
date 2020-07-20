@@ -1,26 +1,29 @@
 /// <reference types="Cypress" />    //Added for auto suggestions
 
-//Adding Fixtures and Env Variables
+//Adding POM
+//Added Chaining
+const loginPage = require("../../pageObjects/LoginPage")
+const actions = require("../../libs/pageHelper")
+
 describe('Validating Successful Login ', function () {  //This is our test Suite
 
-    beforeEach('Visit URL', function () {   //Like testNG before Method. Runs before every test case
+    beforeEach('Visit URL', function () {
         cy.visit(Cypress.env("url"))
     })
 
     it("Enter Incorrect email id and password", function () {
         cy.fixture("example.json").then(function (data) {
-            cy.get("input[id='usr']").type(data.incorrectName)
-            cy.get("input[id='pwd']").type(data.incorrectPass)
-            cy.get("[value='Login']").click()
-            cy.get("#case_login>h3").should("have.text", data.failureMessage)
+            loginPage.login(data.incorrectName, data.incorrectPass)
+            loginPage.verifyMessage(data.failureMessage)
+            loginPage.goBack()
         })
     })
+
     it("Enter Correct email id and password", function () {
         cy.fixture("example.json").then(function (data) {
-            cy.get("input[id='usr']").type(data.correctName)
-            cy.get("input[id='pwd']").type(data.correctPass)
-            cy.get("[value='Login']").click()
-            cy.get("#case_login>h3").should("have.text", data.successMessage)
+            loginPage.login(data.correctName, data.correctPass)
+            loginPage.verifyMessage(data.successMessage)
+            loginPage.goBack()
         })
     })
 })

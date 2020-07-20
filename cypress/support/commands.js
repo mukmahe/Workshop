@@ -11,6 +11,10 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
+Cypress.Commands.add("getWebElement", (locator) => {
+    
+})
+
 //
 //
 // -- This is a child command --
