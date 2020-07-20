@@ -1,22 +1,26 @@
 /// <reference types="Cypress" />    //Added for auto suggestions
 
+//Adding Fixtures and Env Variables
 describe('Validating Successful Login ', function () {  //This is our test Suite
 
     beforeEach('Visit URL', function () {   //Like testNG before Method. Runs before every test case
-        cy.visit("http://testing-ground.scraping.pro/login")  //cy is just like driver. It is a global command which helps us to invoke any cypress command
-        //We need not make object of cy. It's globally available
+        cy.visit(Cypress.env("url"))
     })
 
-    it("Enter Incorrect email id and password", function () {  //First Test Case
-        cy.get("input[id='usr']").type("abc")     //You can also use wildcards
-        cy.get("input[id='pwd']").type("abc")
-        cy.get("[value='Login']").click()
-        cy.get("#case_login>h3").should("have.text", "ACCESS DENIED!") //Can be done using Promise Handling also
+    it("Enter Incorrect email id and password", function () {
+        cy.fixture("example.json").then(function (data) {
+            cy.get("input[id='usr']").type(data.incorrectName)
+            cy.get("input[id='pwd']").type(data.incorrectPass)
+            cy.get("[value='Login']").click()
+            cy.get("#case_login>h3").should("have.text", data.failureMessage)
+        })
     })
-    it("Enter Correct email id and password", function () {  //First Test Case
-        cy.get("input[id='usr']").type("admin")     //You can also use wildcards
-        cy.get("input[id='pwd']").type("12345")
-        cy.get("[value='Login']").click()
-        cy.get("#case_login>h3").should("have.text", "WELCOME :)")
+    it("Enter Correct email id and password", function () {
+        cy.fixture("example.json").then(function (data) {
+            cy.get("input[id='usr']").type(data.correctName)
+            cy.get("input[id='pwd']").type(data.correctPass)
+            cy.get("[value='Login']").click()
+            cy.get("#case_login>h3").should("have.text", data.successMessage)
+        })
     })
 })

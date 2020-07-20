@@ -1,1 +1,7 @@
-{}
+{
+  "env": {
+    "url": "http://testing-ground.scraping.pro/login",
+    "qa": "qa-env",
+    "uat": "uat-env"
+  }
+}
