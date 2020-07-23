@@ -1,25 +1,39 @@
 /// <reference types="Cypress" />    //Added for auto suggestions
 
-//Adding Fixtures and Env Variables
-describe('Validating Successful Login ', function () {  //This is our test Suite
-    beforeEach('Visit URL', function () {   //Like testNG before Method. Runs before every test case
-        cy.visit(Cypress.env("url"))
-        cy.fixture("example.json").then(function (data) {
-            this.data = data
+describe('Validating Successful Addition to Cart', function () {  //This is our test Suite
+
+    before('Visit URL and Login', function () {   //Like testNG before Method. Runs before every test case
+        cy.visit("https://spree-vapasi.herokuapp.com/login")  //cy is just like driver. It is a global command which helps us to invoke any cypress command
+        //We need not make object of cy. It's globally available
+        cy.get("input[id='spree_user_email']").type("mukul@gmail.com")     //You can also use wildcards
+        cy.get("input[id='spree_user_password']").type("123456")
+        cy.get("[value='Login']").click()
+        //We should never make one test dependent on other test
+    })
+
+    it("Select Product Category as Bag and name as Ruby on Rails and add product to cart", function () {  //First Test Case
+        cy.contains("Bags").click()
+        cy.get("[title='Ruby on Rails Tote']").click()
+        //Now here we are just verifying if Cart API is giving us 200 or not? If yes then proceed
+        cy.server()
+        cy.route("/cart_link").as("cart")
+        cy.get("#add-to-cart-button").click()
+        cy.wait("@cart").then(function (response) {
+            expect(response.status).equals(200)
         })
+        cy.get("table[id='cart-detail']>tbody[id='line_items']>tr").should("have.length",1)
     })
 
-    it("Enter Incorrect email id and password", function () {
-        cy.get("input[id='usr']").type(this.data.incorrectName)
-        cy.get("input[id='pwd']").type(this.data.incorrectPass)
-        cy.get("[value='Login']").click()
-        cy.get("#case_login>h3").should("have.text", this.data.failureMessage)
-    })
-
-    it("Enter Correct email id and password", function () {
-        cy.get("input[id='usr']").type(this.data.correctName)
-        cy.get("input[id='pwd']").type(this.data.correctPass)
-        cy.get("[value='Login']").click()
-        cy.get("#case_login>h3").should("have.text", this.data.successMessage)
+    it("Select Product Category as Mugs and name as Ruby on Rails Mug and add Product to Cart", function () {
+        cy.get("[class='continue']").click()
+        cy.contains("Mugs").click()
+        cy.get("[title='Ruby on Rails Mug']").click()
+        cy.server()
+        cy.route("/cart_link").as("cart")
+        cy.get("#add-to-cart-button").click()
+        cy.wait("@cart").then(function (response) {
+            expect(response.status).equals(200)
+        })
+        cy.get("table[id='cart-detail']>tbody[id='line_items']>tr").should("have.length",2)
     })
 })
