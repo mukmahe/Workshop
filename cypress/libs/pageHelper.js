@@ -16,7 +16,7 @@ function getWebElement(locator) {
 }
 
 function clickElement(locator) {
-    getWebElement(locator).click({force: true})
+    getWebElement(locator).click()
 }
 
 

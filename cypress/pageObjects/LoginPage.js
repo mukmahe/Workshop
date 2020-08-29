@@ -7,7 +7,7 @@ const locators = {
     "password": "id:pwd",
     "loginButn": "value:Login",
     "message": "css:#case_login>h3",
-    "goBack": "text:<< GO BACK"
+    "goBack": "css:a[href='login']"
 }
 
 function login(username, password) {

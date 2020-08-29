@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "requestTimeout":10000,
+  "componentFolder":"cypress/component",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dashboard": "npx cypress run --headed --record --key e381373d-b162-4853-b704-0e5c2fa86159"
-
+    "dashboard": "npx cypress run --headed --record --key e381373d-b162-4853-b704-0e5c2fa86159",
+    "muk": "npx cypress run --headless --browser chrome",
+    "muk1": "npx cypress run -b firefox"
   },
   "author": "",
   "license": "ISC",
