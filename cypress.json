@@ -1,6 +1,6 @@
 {
   "env": {
-    "url": "http://testing-ground.scraping.pro/login",
+    "url": "https://katalon-demo-cura.herokuapp.com/profile.php#login",
     "qa": "qa-env",
     "uat": "uat-env"
   }
