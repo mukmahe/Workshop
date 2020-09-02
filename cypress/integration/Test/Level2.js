@@ -2,7 +2,9 @@
 
 const LoginPage = require("../../PageObjects/LoginPage");
 const AppointmentPage = require("../../PageObjects/AppointmentPage");
-const ConfirmPage=require("../../PageObjects/ConfirmPage")
+const ConfirmPage = require("../../PageObjects/ConfirmPage");
+const LogoutPage = require("../../PageObjects/LogoutPage");
+
 describe('Validating Successful AppointmentPage of the User', function () {
 
     before('Visit URL and Login', function () {
@@ -31,8 +33,6 @@ describe('Validating Successful AppointmentPage of the User', function () {
     })
 
     afterEach("Verify Logout Functionality", function () {
-        cy.get("#menu-toggle").click();
-        cy.get("[href*='logout']").click();
-        cy.get("#btn-make-appointment").should("be.visible");
+        LogoutPage.logout();
     })
 })
