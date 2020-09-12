@@ -1,9 +1,9 @@
 /// <reference types="Cypress" />
 
-const LoginPage = require("../../PageObjects/LoginPage");
-const AppointmentPage = require("../../PageObjects/AppointmentPage");
-const ConfirmPage = require("../../PageObjects/ConfirmPage");
-const LogoutPage = require("../../PageObjects/LogoutPage");
+const LoginPage = require("../../pageObjects/LoginPage");
+const AppointmentPage = require("../../pageObjects/AppointmentPage");
+const ConfirmPage = require("../../pageObjects/ConfirmPage");
+const LogoutPage = require("../../pageObjects/LogoutPage");
 
 describe('Validating Successful AppointmentPage of the User', function () {
 

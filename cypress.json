@@ -1,4 +1,5 @@
 {
+  "$schema": "https://on.cypress.io/cypress.schema.json",
   "env": {
     "url": "https://katalon-demo-cura.herokuapp.com/profile.php#login",
     "qa": "qa-env",
