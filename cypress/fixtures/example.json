@@ -1,8 +1,0 @@
-{
-  "correctName": "admin",
-  "correctPass": "12345",
-  "successMessage": "WELCOME :)",
-  "incorrectName": "abc",
-  "incorrectPass": "abc",
-  "failureMessage": "ACCESS DENIED!"
-}

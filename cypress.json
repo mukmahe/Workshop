@@ -1,10 +1,8 @@
 {
+  "$schema": "https://on.cypress.io/cypress.schema.json",
   "env": {
-    "url": "http://testing-ground.scraping.pro/login",
+    "url": "https://katalon-demo-cura.herokuapp.com/profile.php#login",
     "qa": "qa-env",
-    "uat": "uat-env",
-    "dynamicTable": "https://www.w3schools.com/html/html_tables.asp"
-  },
-
-  "projectId": "dzbi3u"
+    "uat": "uat-env"
+  }
 }
