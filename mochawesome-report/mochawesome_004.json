@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-09-20T17:18:43.753Z",
+    "end": "2020-09-20T17:18:44.896Z",
+    "duration": 1143,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "907b11e5-1e83-4fe8-b0a0-32ed695c6da6",
+      "title": "",
+      "fullFile": "cypress/integration/Test/facebook.js",
+      "file": "cypress/integration/Test/facebook.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4b57ad06-7e8c-4f7d-aa3b-12f0c9232a1d",
+          "title": "Visit Facebook",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Facebook",
+              "fullTitle": "Visit Facebook Verify Facebook",
+              "timedOut": null,
+              "duration": 1105,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.facebook.com/\");\ncy.wait(10000);\ncy.url().should(\"contain\", \"google\");",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.facebook.com/\n\nThe response we received from your web server was:\n\n  > 400: Bad Request\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.facebook.com/\n\nThe response we received from your web server was:\n\n  > 400: Bad Request\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at http://localhost:65408/__cypress/runner/cypress_runner.js:156417:25\n    at visitFailedByErr (http://localhost:65408/__cypress/runner/cypress_runner.js:155794:12)\n    at http://localhost:65408/__cypress/runner/cypress_runner.js:156397:13\n    at tryCatcher (http://localhost:65408/__cypress/runner/cypress_runner.js:10130:23)\n    at Promise._settlePromiseFromHandler (http://localhost:65408/__cypress/runner/cypress_runner.js:8065:31)\n    at Promise._settlePromise (http://localhost:65408/__cypress/runner/cypress_runner.js:8122:18)\n    at Promise._settlePromise0 (http://localhost:65408/__cypress/runner/cypress_runner.js:8167:10)\n    at Promise._settlePromises (http://localhost:65408/__cypress/runner/cypress_runner.js:8243:18)\n    at _drainQueueStep (http://localhost:65408/__cypress/runner/cypress_runner.js:4837:12)\n    at _drainQueue (http://localhost:65408/__cypress/runner/cypress_runner.js:4830:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:65408/__cypress/runner/cypress_runner.js:4846:5)\n    at Async.drainQueues (http://localhost:65408/__cypress/runner/cypress_runner.js:4716:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:65408/__cypress/tests?p=cypress/integration/Test/facebook.js:10:8)",
+                "diff": null
+              },
+              "uuid": "39abad9c-5132-4fba-98ba-b50c4d9ae62a",
+              "parentUUID": "4b57ad06-7e8c-4f7d-aa3b-12f0c9232a1d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "39abad9c-5132-4fba-98ba-b50c4d9ae62a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1105,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
