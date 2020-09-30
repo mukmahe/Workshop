@@ -25,8 +25,8 @@ function handleCalender(date) {
     let dateSplit=date.split("/");
     actions.clickElement(locators.visitDate);
     actions.getWebElement(locators.visitDate_datePick).first().click();
-    cy.contains(dateSplit[1]).click();
-    cy.contains(dateSplit[0]).click();
+    cy.contains(dateSplit[1]).click({force:true});
+    cy.contains(dateSplit[0]).click({force:true});
 }
 
 module.exports = {
