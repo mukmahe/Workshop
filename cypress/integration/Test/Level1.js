@@ -24,8 +24,8 @@ describe('Validating Successful Appointment of the User', function () {  //This 
         //Handle Calender to enter 28-Sep-2020
         cy.get("#txt_visit_date").click();
         cy.get("[class='datepicker-switch']").first().click();
-        cy.contains("Sep").click();
-        cy.contains("28").click();
+        cy.contains("Sep").click({force:true});
+        cy.contains("28").click({force:true});
 
         cy.get("#txt_comment").type("Test Comment")
         cy.get("#btn-book-appointment").click();
