@@ -4,5 +4,12 @@
     "url": "https://katalon-demo-cura.herokuapp.com/profile.php#login",
     "qa": "qa-env",
     "uat": "uat-env"
-  }
+  },
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "overwrite": false,
+    "html": false,
+    "json": true
+  },
+  "video": false
 }

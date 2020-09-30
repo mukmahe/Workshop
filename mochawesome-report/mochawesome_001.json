@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 1,
+    "failures": 0,
+    "start": "2020-09-30T05:34:23.008Z",
+    "end": "2020-09-30T05:34:42.598Z",
+    "duration": 19590,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d9d3f29e-09e0-4234-8c8b-b88f7eecf3b9",
+      "title": "",
+      "fullFile": "cypress/integration/Test/Level3.js",
+      "file": "cypress/integration/Test/Level3.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "150551d6-8290-4a3b-850f-b8508ca9d52c",
+          "title": "Validating Successful AppointmentPage of the User",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Book appointment for Hongkong CURA Healthcare Center",
+              "fullTitle": "Validating Successful AppointmentPage of the User Book appointment for Hongkong CURA Healthcare Center",
+              "timedOut": null,
+              "duration": 8260,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "AppointmentPage.bookAppointment(this.data.Hospital1, this.data.readmission, this.data.program, this.data.visitDate, this.data.comment);\nConfirmPage.confirmFacilityName(this.data.Hospital1);\nConfirmPage.confirmText();",
+              "err": {},
+              "uuid": "7a1fa6ab-bbe4-48af-ac33-af431ea4a84d",
+              "parentUUID": "150551d6-8290-4a3b-850f-b8508ca9d52c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Book appointment for Seoul CURA Healthcare Center",
+              "fullTitle": "Validating Successful AppointmentPage of the User Book appointment for Seoul CURA Healthcare Center",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "dc183f58-3f73-44cc-977c-b95b444e2bf8",
+              "parentUUID": "150551d6-8290-4a3b-850f-b8508ca9d52c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7a1fa6ab-bbe4-48af-ac33-af431ea4a84d"
+          ],
+          "failures": [],
+          "pending": [
+            "dc183f58-3f73-44cc-977c-b95b444e2bf8"
+          ],
+          "skipped": [],
+          "duration": 8260,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
