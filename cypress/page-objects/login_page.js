@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-const actions=require("../libs/pageHelper")
+const actions=require("../libs/page_helper")
 
 const locators = {
     makeAppointment: "id:btn-make-appointment",

@@ -1,15 +1,15 @@
 /// <reference types="Cypress" />
 
-const LoginPage = require("../../pageObjects/LoginPage");
-const AppointmentPage = require("../../pageObjects/AppointmentPage");
-const ConfirmPage = require("../../pageObjects/ConfirmPage");
-const LogoutPage = require("../../pageObjects/LogoutPage");
+const LoginPage = require("../../page-objects/login_page");
+const AppointmentPage = require("../../page-objects/appointment_page");
+const ConfirmPage = require("../../page-objects/confirm_page");
+const LogoutPage = require("../../page-objects/logout_page");
 
 describe('Validating Successful AppointmentPage of the User', function () {
 
     before('Visit URL and Login', function () {
         cy.visit(Cypress.env('url'));
-        cy.fixture("TestData.json").then(function (data) {
+        cy.fixture("test_data.json").then(function (data) {
             this.data = data;
         })
     })
