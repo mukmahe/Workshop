@@ -16,6 +16,6 @@ $` npx cypress open`
 * ###### _[master] - Demonstrate reporting, file uploading etc
 
 
-#### Some good coding conventions
+#### Some Good Coding Conventions
 1. File names must be all lowercase and may include underscores (_) or dashes (-), but no additional punctuation. 
 Source- https://google.github.io/styleguide/jsguide.html#file-name
