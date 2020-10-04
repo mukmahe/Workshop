@@ -16,6 +16,15 @@ $` npx cypress open`
 * ###### _[master] - Demonstrate reporting, file uploading etc
 
 
+#### Jenkins SetUp
+1. Visit https://www.jenkins.io/download/ and download stable version of jenkins war file 
+2. Cut this war file from downloads folder and then paste this in a folder say Documents/Jenkins
+3. Open Iterm(for MAC)/CMD(for Windows) and reach to 'CypressAutomation' folder eg- $$cd /Users/mukulmaheshwari/Documents/Jenkins
+4. Execute Jenkins on port 8080 by using command $java -jar jenkins.war -httpPort=8080 
+5. Open http://localhost:8080/ on your browser
+6. Click on new item and enter name as CypressAutomation, select freestyle project and click OK
+
+
 #### Some Good Coding Conventions
 1. File names must be all lowercase and may include underscores (_) or dashes (-), but no additional punctuation. 
 Source- https://google.github.io/styleguide/jsguide.html#file-name
