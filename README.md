@@ -19,3 +19,4 @@ $` npx cypress open`
 #### Some Good Coding Conventions
 1. File names must be all lowercase and may include underscores (_) or dashes (-), but no additional punctuation. 
 Source- https://google.github.io/styleguide/jsguide.html#file-name
+2. Use camelCase for identifier names (variables and functions)
