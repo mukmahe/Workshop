@@ -7,8 +7,9 @@
   },
   "reporter": "mochawesome",
   "reporterOptions": {
-    "overwrite": false,
-    "html": false,
+    "reportDir": "cypress/results",
+    "overwrite": true,
+    "html": true,
     "json": true
   },
   "video": false

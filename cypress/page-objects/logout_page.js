@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-const actions=require("../libs/pageHelper")
+const actions=require("../libs/page_helper")
 
 const locators = {
     menuToggle: "id:menu-toggle",
@@ -8,9 +8,9 @@ const locators = {
 }
 
 function logout() {
-    actions.clickElement(locators.menuToggle);
-    actions.clickElement(locators.logout);
-    actions.getWebElement(locators.makeAppointmentBtn).should("be.visible");
+    actions.clickElement(locators.menuToggle)
+    actions.clickElement(locators.logout)
+    actions.getWebElement(locators.makeAppointmentBtn).should("be.visible")
 }
 
 module.exports={
