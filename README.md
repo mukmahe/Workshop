@@ -23,6 +23,15 @@ $` npx cypress open`
 4. Execute Jenkins on port 8080 by using command $java -jar jenkins.war -httpPort=8080 
 5. Open http://localhost:8080/ on your browser
 6. Click on new item and enter name as CypressAutomation, select freestyle project and click OK
+7. In General section check on "This project is parameterized" 
+8. In add parameter select choice parameter and give name as 'script' and in choices add all the choices you have in package.json eg chrome, edge etc
+9. In source code management select git and give link of your git repository 
+10. In build select execute shell 
+11. In command select npm run "$script"
+12. Save the project
+13. In homepage goto your project 
+14. Select build with parameters and select any option
+15. Click on build and verify the console log 
 
 
 #### Some Good Coding Conventions
