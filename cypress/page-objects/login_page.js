@@ -9,10 +9,10 @@ const locators = {
 }
 
 function login(username,password) {
-    actions.clickElement(locators.makeAppointment);
-    actions.getWebElement(locators.username).type(username);
-    actions.getWebElement(locators.password).type(password);
-    actions.clickElement(locators.loginBtn);
+    actions.clickElement(locators.makeAppointment)
+    actions.getWebElement(locators.username).type(username)
+    actions.getWebElement(locators.password).type(password)
+    actions.clickElement(locators.loginBtn)
 }
 
 module.exports={

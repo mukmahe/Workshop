@@ -1,10 +1,8 @@
 {
-  "username": "John Doe",
-  "password": "ThisIsNotAPassword",
   "Hospital1": "Hongkong CURA Healthcare Center",
   "readmission": "yes",
   "program": "medicaid",
   "comment": "Test appointment scenario",
   "Hospital2": "Seoul CURA Healthcare Center",
-  "visitDate": "28/Sep/2020"
+  "visitDate": "22/Oct/2020"
 }

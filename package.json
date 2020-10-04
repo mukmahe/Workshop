@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "intractive": "npx cypress open",
+    "headless": "npx cypress run --headless -b chrome",
+    "google": "npx cypress run --headless -b chrome --spec './cypress/integration/tests/google.js'",
+    "edge": "npx cypress run --headed -b edge",
+    "chrome": "npx cypress run --headed -b chrome",
+    "qa-env": "npx cypress run --env url='www.google.com' --headed -b chrome"
   },
   "author": "",
   "license": "ISC",
