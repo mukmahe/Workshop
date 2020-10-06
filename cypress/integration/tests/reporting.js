@@ -1,9 +1,9 @@
 /// <reference types="Cypress" />
 
-const LoginPage = require("../../page-objects/login_page")
-const AppointmentPage = require("../../page-objects/appointment_page")
-const ConfirmPage = require("../../page-objects/confirm_page")
-const LogoutPage = require("../../page-objects/logout_page")
+const LoginPage = require("../../pages/login_page")
+const AppointmentPage = require("../../pages/appointment_page")
+const ConfirmPage = require("../../pages/confirm_page")
+const LogoutPage = require("../../pages/logout_page")
 const hospitalData = require("../../fixtures/hospital_data.json")
 
 describe('Validating Successful AppointmentPage of the User', function () {
