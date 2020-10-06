@@ -11,9 +11,7 @@ function confirmFacilityName(facilityName) {
 }
 
 function confirmText() {
-    actions.getWebElement(locators.confirmText).then(function (ele) {
-        expect(ele.text().toString()).includes("appointment has been booked"); //Chai assertion
-    })
+    actions.getWebElement(locators.confirmText).should("include.text","appointment has been booked")
 }
 module.exports={
     confirmFacilityName,
