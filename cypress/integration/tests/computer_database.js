@@ -29,9 +29,9 @@ To execute
 3. headless mode with a customized browser => npx cypress run -b browserName* --headless
 4. headless mode with quick env set => npx cypress run --env url=environment* --headless
 5. headless mode if you want to run only specific test case =>
-npx cypress run --headless --spec "./cypress/integration/tests/computer-database.js"
+npx cypress run --headless --spec "./cypress/integration/tests/computer_database.js"
 6. You can combine also
-npx cypress run --headless -b chrome --spec "./cypress/integration/tests/computer-database.js" --env url=http://computer-database.gatling.io/computers
+npx cypress run --headless -b chrome --spec "./cypress/integration/tests/computer_database.js" --env url=http://computer-database.gatling.io/computers
 
 browserName* = chrome/edge
 environment* = your env (http://computer-database.gatling.io/computers)
