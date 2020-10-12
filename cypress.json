@@ -1,7 +1,7 @@
 {
   "$schema": "https://on.cypress.io/cypress.schema.json",
   "env": {
-    "url": "https://katalon-demo-cura.herokuapp.com/profile.php#login",
+    "url": "http://computer-database.gatling.io/computers",
     "qa": "qa-env",
     "uat": "uat-env"
   }

@@ -10,25 +10,16 @@ function getWebElement(locator) {
         case "text":
             return cy.contains(locatorText)
             break
-        case "id":
-            return cy.get(`[id="${locatorText}"]`)
-            break
         default:
             throw new Error("Wrong locator passed " + locator)
     }
-
 }
 
 function clickElement(locator) {
     getWebElement(locator).click()
 }
 
-function replacePlaceHolder(locator,value){
-    locator=locator.replace("{replace}",value)
-    return locator
-}
 module.exports={
     clickElement,
-    getWebElement,
-    replacePlaceHolder
+    getWebElement
 }
