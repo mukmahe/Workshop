@@ -7,7 +7,7 @@ $` npm i`
 $` npx cypress open`  
 
 #### Application Under Test
-:point_right: katalon-demo-cura.herokuapp.com/profile.php#login
+:point_right: http://computer-database.gatling.io/computers
 
 
 #### Branches
